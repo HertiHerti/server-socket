@@ -6,7 +6,7 @@ var server     = require('http').createServer(),
 
     }),
     logger     = require('winston'),
-    port       = 9229;
+    port       = 3001;
 
 // Logger config
 logger.remove(logger.transports.Console);
