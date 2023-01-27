@@ -29,7 +29,7 @@ var options = {
   httpCompression: true,
   origins: '*:*' ,
   cors: {
-    origin: ["http://localhost","https://ariel-server-socket.glitch.me",'https://server-socket-three.vercel.app'],
+    origin: ["http://localhost"],
     methods: ["GET", "POST"],
     credentials: true,
     
