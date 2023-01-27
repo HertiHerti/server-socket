@@ -46,7 +46,7 @@ app.get("/robot", (request, response) => {
 });
 
 // Launch express server
-var  port  = process.env.PORT;
+var  port  = 3000;
 const server = createServer(app);
 const io = require('socket.io')(server,options)
 io.on('connection', function (socket){
