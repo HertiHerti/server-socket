@@ -6,16 +6,15 @@ var cors = require('cors')
 
 // Configure express for serving files
 const app = express();
-app.use(cors({credentials: true,origin: '192.168.110.110'}));
+app.use(cors({credentials: true,origin: 'https://server-socket-three.vercel.app'}));
 
 app.use(function(req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost");
     res.setHeader("Access-Control-Allow-Headers", "X-Requested-With");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     res.setHeader("Access-Control-Allow-Methods", "PUT, GET, POST, PATCH, DELETE, OPTIONS");  
-    res.setHeader('Access-Control-Allow-Credentials', false);  
+    res.setHeader('Access-Control-Allow-Credentials', true);  
     res.setHeader("Content-Security-Policy", "script-src 'self'");
-    res.send(`HTTPS: ${req.secure}`)
     next();
   });
 
@@ -24,13 +23,13 @@ var options = {
   allowEIO3: true,
   allowEIO2: true, 
   allowEIO1: true, 
- // transports: ['websocket', 'file', 'htmlfile', 'xhr-polling', 'jsonp-polling', 'polling'],
-  //pingTimeout: 9000,
-  //pingInterval: 3000,
-  //httpCompression: true,
+ transports: ['websocket', 'file', 'htmlfile', 'xhr-polling', 'jsonp-polling', 'polling'],
+  pingTimeout: 9000,
+  pingInterval: 3000,
+  httpCompression: true,
   origins: '*:*' ,
   cors: {
-    origin: ["http://localhost","https://ariel-server-socket.glitch.me",'tcp://ariel-server-socket.glitch.me:3000'],
+    origin: ["http://localhost","https://ariel-server-socket.glitch.me",'https://server-socket-three.vercel.app'],
     methods: ["GET", "POST"],
     credentials: true,
     

@@ -19,12 +19,12 @@
     },
 
   "repository": {
-    "url": "https://glitch.com/edit/#!/glitch-mvp-node"
+    "url": ""
   },
   "license": "MIT",
   "keywords": [
     "node",
-    "glitch"
+    "vercel"
   ]
 }
 
