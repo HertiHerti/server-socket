@@ -36,11 +36,6 @@ var options = {
   }
 };
 
-
-
-
-
-
 app.use(express.json({ extended: false }));
 app.use(express.static("public"));
 app.get("/", (request, response) => {
