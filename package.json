@@ -9,8 +9,24 @@
         "node": ">=10.15"
     },
     "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
         "socket.io": "^2",
         "supervisor": "^0.12.0",
-        "winston": "^2"
-    }
+        "winston": "^2",
+        "ws": "^7.2.3"
+
+    },
+
+  "repository": {
+    "url": "https://glitch.com/edit/#!/glitch-mvp-node"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch"
+  ]
 }
+
+
+
