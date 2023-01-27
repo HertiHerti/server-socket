@@ -54,7 +54,7 @@ app.get("/robot", (request, response) => {
 // Launch express server
 var  port  = process.env.PORT;
 const server = createServer(app);
-const io = require('socket')(server,options)
+const io = require('socket.io')(server,options)
 io.on('connection', function (socket){
   console.log('connected dfdf ')
   io.emit('user', {name: 'Marcelo Aires'});
