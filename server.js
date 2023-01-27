@@ -32,7 +32,6 @@ var options = {
     origin: ["http://localhost"],
     methods: ["GET", "POST"],
     credentials: true,
-    
   }
 };
 
